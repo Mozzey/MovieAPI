@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -20,8 +20,8 @@
       <div class="col-md-6 offset-4 mt-5">
         <div class="input-group">
           <div class="input-group">
-            <input type="text" class="form-control search-bar" aria-label="Searh for a Movie">
-            <button class="btn btn-outline-dark text-primary category-movies" type="submit" onclick="getMovieByCategory()">Category</button>
+            <input type="text" class="form-control search-bar col-md-6" placeholder="Enter movie category and click the button --->">
+            <button class="btn btn-outline-dark text-primary category-movies" type="submit" onclick="getMovieByCategory()">Search</button>
           </div>
           <button class="btn btn-outline-dark text-success" type="button" onclick="getAllMovies()">All</button>
           <button class="btn btn-outline-dark text-danger" type="button" onclick="getRandomMovie()">Random</button>
@@ -31,8 +31,8 @@
   </header>
 
   <div class="container">
-    <div class="row">
-      <div class="col-md-12 movieCards d-flex justify-content-around"></div>
+    <div class="row movieCards d-flex justify-content-around">
+      <!--<div class="col-md-12 movieCards d-flex justify-content-around"></div>-->
     </div>
   </div>
 

@@ -17,17 +17,17 @@ function getAllMovies() {
         };
 
         display += `
-        <div class="card mt-5 p-0" style="width: 12rem;">
+        <div class="card col-md-3 mt-5 mx-1" style="width: 12rem;">
           <img class="card-img-top" src="./imgs/${
             movieObject.Title
-          }.jpg" alt="${movieObject.Title}">
+          }.jpg" alt="${movieObject.Title}" style="height: 15rem !important;">
           <div class="card-body">
             <h5 class="card-title">${movieObject.Title}</h5>
             <p class="card-text">Category: ${movieObject.Category}</p>
             <p class="card-text">Released: ${movieObject.Year}</p>
             <a href="https://en.wikipedia.org/wiki/${
               movieObject.Title
-            }_(film)" class="btn btn-outline-success">IMDb</a>
+            }_(film)" class="btn btn-outline-success" target="_new">IMDb</a>
           </div>
         </div>
         
