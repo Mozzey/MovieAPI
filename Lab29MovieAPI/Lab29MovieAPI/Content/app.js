@@ -39,7 +39,7 @@ function getAllMovies() {
 
 function getRandomMovie() {
   let display = '';
-  let randomId = Math.floor(Math.random() * 3 + 1);
+  let randomId = Math.floor(Math.random() * 10 + 1);
   let movieObject = {};
 
   fetch(`http://localhost:63447/api/Movies`)
