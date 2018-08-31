@@ -17,10 +17,10 @@ function getAllMovies() {
         };
 
         display += `
-        <div class="card col-md-3 mt-5 mx-1" style="width: 12rem;">
+        <div class="card col-md-3">
           <img class="card-img-top" src="./imgs/${
             movieObject.Title
-          }.jpg" alt="${movieObject.Title}" style="height: 15rem !important;">
+            }.jpg" alt="${movieObject.Title}" style="height: 12rem !important;">
           <div class="card-body">
             <h5 class="card-title">${movieObject.Title}</h5>
             <p class="card-text">Category: ${movieObject.Category}</p>
@@ -53,20 +53,20 @@ function getRandomMovie() {
           Year: movie.Year
         };
         if (movieObject.Id === randomId) {
-          display += `
-            <div class="card mt-5 p-0" style="width: 12rem;">
-              <img class="card-img-top" src="./imgs/${
-                movieObject.Title
-              }.jpg" alt="${movieObject.Title}">
-              <div class="card-body">
-                <h5 class="card-title">${movieObject.Title}</h5>
-                <p class="card-text">Category: ${movieObject.Category}</p>
-                <p class="card-text">Released: ${movieObject.Year}</p>
-                <a href="https://en.wikipedia.org/wiki/${
-                  movieObject.Title
-                }_(film)" class="btn btn-outline-success">IMDb</a>
-              </div>
-            </div>
+            display += `
+                <div class="card mt-5">
+                  <img class="card-img-top" src="./imgs/${
+                    movieObject.Title
+                  }.jpg" alt="${movieObject.Title}" sytle="height: 12rem !important;">
+                  <div class="card-body text-center">
+                    <h5 class="card-title">${movieObject.Title}</h5>
+                    <p class="card-text">Category: ${movieObject.Category}</p>
+                    <p class="card-text">Released: ${movieObject.Year}</p>
+                    <a href="https://en.wikipedia.org/wiki/${
+                      movieObject.Title
+                    }_(film)" class="btn btn-outline-success">IMDb</a>
+                  </div>
+                </div>
             `;
           document.querySelector('.movieCards').innerHTML = display;
         }
@@ -90,12 +90,12 @@ function getMovieByCategory() {
           Year: movie.Year
         };
 
-        if (catSearch === movieObject.Category) {
+        if (catSearch.toLowerCase() === movieObject.Category.toLowerCase()) {
           display += `
-          <div class="card mt-5 p-0" style="width: 12rem;">
+          <div class="card mt-5 p-0 col-md-3" style="width: 7rem;">
           <img class="card-img-top" src="./imgs/${
             movieObject.Title
-          }.jpg" alt="${movieObject.Title}">
+          }.jpg" alt="${movieObject.Title}" style="height: 20rem !important;">
           <div class="card-body">
           <h5 class="card-title">${movieObject.Title}</h5>
           <p class="card-text">Category: ${movieObject.Category}</p>
